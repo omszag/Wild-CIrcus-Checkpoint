@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="/style/header.css" rel="stylesheet">
+<link href="/style/footer.css" rel="stylesheet">
+<link href="/style/index.css" rel="stylesheet">
+<link href="/style/reservation.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/47ff173283.js" crossorigin="anonymous"></script>
+<title>Wild Circus</title>
+</head>
+<body>
+<header><nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+	<div class="container">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><span>WILD CIRCUS</span></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">RESERVATION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ARTIST</a>
+      </li>
+    </ul>
+  </div>
+	</div>
+</nav>
+
+<div class="banner">
+	<div class="container">
+	<div class="banner-text">
+	<div class="banner-heading">
+	 PRICES!
+	</div>
+	<div class="banner-sub-heading">
+	COME AND SEE THE BEST SHOW EVER
+	</div>
+	</div>
+	</div>
+</div></header>
+
+<div id="generic_price_table">   
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="generic_content clearfix">
+                        <div class="generic_head_price clearfix">
+                            <div class="generic_head_content clearfix">
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>ADULTS</span>
+                                </div>
+                            </div>
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">$</span>
+                                    <span class="currency">19</span>
+                                    <span class="cent">.99</span>
+                                    <span class="month">/PER</span>
+                                </span>
+                            </div>
+                        </div> 
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>1 POPCORN</span> </li>
+                                <li><span>1 DRINK(soft)</span></li>
+                                <li><span>1 PICTURE</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="generic_content active clearfix">
+                        <div class="generic_head_price clearfix">
+                            <div class="generic_head_content clearfix">
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>CHILDREN</span>
+                                </div>
+                            </div>
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">$</span>
+                                    <span class="currency">10</span>
+                                    <span class="cent">.99</span>
+                                    <span class="month">/CHILD</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>1 POPCORN</span> </li>
+                                <li><span>1 DRINK(soft)</span> </li>
+                                <li><span>1 TOYS</span> </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-4">
+                    <div class="generic_content clearfix">
+                        <div class="generic_head_price clearfix">
+                            <div class="generic_head_content clearfix">
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>GROUP(more 10/P)</span>
+                                </div>
+                            </div>
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">$</span>
+                                    <span class="currency">17</span>
+                                    <span class="cent">.99</span>
+                                    <span class="month">/PER</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>1 POPCORN</span> </li>
+                                <li><span>1 DRINK(soft)</span></li>
+                                <li><span>1 PICTURE</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>             
+</div>
+
+<div class="page-wrapper bg-red ">
+		<div class="container">
+			<div class="card card-2">
+				<div class="card-heading"></div>
+				<div class="card-body">
+          <h2 class="title">RESERVATION</h2>
+					<form method="post" action="sendReservation" th:action="@{/sendReservation}">
+						<div class="input-group">
+							<input class="input--style-2" type="text" placeholder="Name"
+								name="name" required>
+						</div>
+						<div class="input-group">
+							<input type="text" class="input--style-2" placeholder="E-mail"
+								name="email" required>
+						</div>
+						<div class="input-group">
+							<input type="text" class="input--style-2"
+								placeholder="Phone" name="phonenumber" required>
+						</div>
+						<div class="input-group">
+								<input class="input--style-2 js-datepicker" type="text"
+									placeholder="Date" name="date"> <i
+									class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+						</div>
+						<div class="input-group">
+							<div class="rs-select2 js-select-simple select--no-search">
+								<select name="hour">
+									<option disabled="disabled" selected="selected">TIME</option>
+									<option value="9h">09:00</option>
+									<option value="10h">10:00</option>
+									<option value="11h">11:00</option>
+									<option value="14h">14:00</option>
+									<option value="15h">15:00</option>
+									<option value="16h">16:00</option>
+									<option value="17h">17:00</option>
+									<option value="18h">19:00</option>
+								</select>
+								<div class="select-dropdown"></div>
+							</div>
+						</div>
+						<div class="input-group">
+							<div class="rs-select2 js-select-simple select--no-search">
+								<select name="persons">
+									<option disabled="disabled" selected="selected">Number of Adults</option>
+									<option value="1 personne">1</option>
+									<option value="2 personnes">2</option>
+								</select>
+								<div class="select-dropdown"></div>
+							</div>
+						</div>
+						<div class="input-group">
+							<div class="rs-select2 js-select-simple select--no-search">
+								<select name="persons">
+									<option disabled="disabled" selected="selected">Number of Children</option>
+									<option value="0 personne">0</option>
+									<option value="1 personnes">1</option>
+									<option value="2 personnes">2</option>
+								</select>
+								<div class="select-dropdown"></div>
+							</div>
+						</div>
+						<div class="input-group">
+							<div class="rs-select2 js-select-simple select--no-search">
+								<select name="persons">
+									<option disabled="disabled" selected="selected">Number of person/group</option>
+									<option value="10 personne">10</option>
+									<option value="11 personnes">11</option>
+								</select>
+								<div class="select-dropdown"></div>
+							</div>
+						</div>
+						<div class="p-t-30">
+							<button class="btn btn--radius btn--green" type="submit"
+								value="Send">RESERVATION</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<footer th:replace="footer.html :: footer"></footer>   
+<script src="/js/header.js" ></script>
+</body>
+</html>
