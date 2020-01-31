@@ -1,0 +1,266 @@
+.navbar.bg-light {
+	background-color: #000 !important;
+	transition: ease 0.5s;
+	z-index: 20;
+}
+
+.magicien{
+	padding-top:25px;
+}
+
+.btn-primary{
+	margin-top:120px;
+}
+
+.user-profile {
+	width: 50px;
+	height: 50px;
+	background-color: #f1f1f1;
+}
+
+.navbar .menu-bar {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.navbar .menu-bar .bars {
+	position: relative;
+	top: 50%;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+}
+
+.navbar .menu-bar .bars::after {
+	content: "";
+	position: absolute;
+	bottom: -8px;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+}
+
+.navbar .menu-bar .bars::before {
+	content: "";
+	position: absolute;
+	top: -8px;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+}
+
+.navbar ul.navbar-nav li.nav-item.ets-right-0 .dropdown-menu {
+	left: auto;
+	right: 0;
+	position: absolute;
+}
+
+.side-bar {
+	position: fixed;
+	top: 81px;
+	left: 0;
+	padding: 15px;
+	display: none;
+	width: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 8px #ccc;
+	height: 100%;
+	transition: ease 0.5s;
+	overflow-y: auto;
+	z-index: 20;
+}
+
+.main-body-content {
+	display: inline-block;
+	padding: 15px;
+	background-color: #eef4fb;
+	height: 100vh;
+	padding-left: 100px;
+	transition: ease 0.5s;
+}
+
+.ets-pt {
+	padding-top: 100px;
+}
+
+.main-admin.show-menu .side-bar {
+	position: fixed;
+	top: 81px;
+	left: 0;
+	padding: 15px;
+	display: inline-block;
+	width: 250px;
+	background-color: #fff;
+	box-shadow: 0px 0px 8px #ccc;
+	transition: ease 0.5s;
+	overflow-y: auto;
+	z-index: 20;
+}
+
+.main-admin.show-menu .main-body-content {
+	padding-left: 265px;
+}
+
+.main-admin.show-menu .navbar .menu-bar .bars {
+	width: 15px;
+}
+
+.main-admin.show-menu .navbar .menu-bar .bars::after {
+	width: 10px;
+}
+
+.main-admin.show-menu .navbar .menu-bar .bars::before {
+	width: 25px;
+}
+
+.main-admin.show-menu .side-bar-links {
+	opacity: 1;
+}
+
+.main-admin.show-menu .side-bar .side-bar-icons {
+	opacity: 0;
+}
+/**** end effacts ****/
+.side-bar .side-bar-links {
+	opacity: 0;
+	transition: ease 0.5s;
+}
+
+.side-bar .side-bar-links ul.navbar-nav li a {
+	font-size: 14px;
+	color: #000;
+	font-weight: 500;
+	padding: 10px;
+}
+
+.side-bar .side-bar-links ul.navbar-nav li a i {
+	font-size: 20px;
+	color: #8ac1f6;
+}
+
+.side-bar .side-bar-links ul.navbar-nav li a:hover, .side-bar-links ul.navbar-nav li a:focus
+	{
+	text-decoration: none;
+	background-color: #8ac1f6;
+	color: #fff;
+}
+
+.side-bar .side-bar-links ul.navbar-nav li a:hover i {
+	color: #fff;
+}
+
+.side-bar .side-bar-logo img {
+	width: 100px;
+	height: 100px;
+}
+
+.side-bar .side-bar-icons {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 100px;
+	opacity: 1;
+	transition: ease 0.5s;
+}
+
+.side-bar .side-bar-icons .side-bar-logo img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.side-bar .side-bar-icons .side-bar-logo h5 {
+	font-size: 14px;
+}
+
+.side-bar .side-bar-icons .set-width {
+	color: #000;
+	font-size: 32px;
+}
+
+.side-bar .side-bar-icons .set-width:hover, .side-bar .side-bar-icons .set-width:focus
+	{
+	color: #8ac1f6;
+	text-decoration: none;
+}
+@media screen and (min-width: 200px) and (max-width: 1200px) {
+	
+	.side-bar {
+	
+	height: 88vh;
+	
+	}
+	
+}
+@media only screen and (min-width: 1200px) {
+	.formulaire {
+		padding: 172px !important;
+	}
+	body {
+		background-color: #d8d8d8 !important;
+	}
+	.addButton {
+		margin: 190px;
+	}
+	img {
+		max-width: 400px;
+	}
+	.navbar.navbar-expand-lg.navbar-light.bg-light.position-fixed.w-100 {
+		z-index: 1;
+	}
+	.side-bar {
+		z-index: 20;
+		width: 200px
+	}
+	.formulaireajout {
+		width: 77vw;
+		position: relative;
+		right: 50px;
+		margin-left: 200px;
+	}
+}
+
+.lienretour {
+	margin-left: 250px;
+}
+
+.pagepartie2 {
+	display: flex;
+	justify-content: center;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 1200px) {
+	.formulaire {
+		padding: 172px !important;
+		position: relative;
+		top: -77px;
+	}
+	.formulaireajout {
+		width: 66vw;
+		position: relative;
+		right: 300px;
+		margin-left: 200px;
+	}
+}
+
+.lienretour {
+	margin-left: 50px;
+	position: relative;
+}
+
+.divretour {
+	width: 315px;
+	position: relative;
+	right: 24px;
+	top: 40px;
+}
+
+.form-horizontal {
+
+padding-top:15px!important;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+<title>WILD CIRCUS</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head th:replace="adminpanel.html :: adminhead"></head>
+<link href="../style/adminpanel.css" rel="stylesheet">
+<link href="../style/equipe.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="fragmentnav" th:replace="adminpanel.html :: adminHeader"></div>
+	<div class="row justify-content-center">
+		<a href="/admin/magicien" class="btn btn-primary btn-xl push-center">
+			Ajouter un nouveau magicien</a>
+	</div>
+<div class="magicien">
+<div class="container">
+        <div class="row">
+
+          <div class="col-md-4" th:each="magicien : ${magiciens}">
+            <div class="team-member">
+              <figure>
+                <img th:src="${magicien.photo}" src="https://cdn.pixabay.com/photo/2018/09/12/21/10/gothic-3673246_960_720.jpg" alt="" class="img-responsive">
+                <figcaption>
+                  <p th:text="${magicien.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia.</p>
+                </figcaption>
+              </figure>
+              <h4 th:text="${magicien.name}">Lauren Cox</h4>
+              <p>MAGICIAN</p>
+            </div><!-- /.team-member-->
+            <a class="btn btn-default" th:href="@{/admin/magicien(id=${magicien.id})}">EDITER</a> 
+<a class="btn btn-danger" th:href="@{/admin/magicien/delete(id=${magicien.id})}">SUPPRIMER</a>
+          </div><!-- /.col-md-4 -->
+		</div>
+	</div>
+</div>
+</body>
+<div th:replace="adminpanel.html :: adminJsBottom"></div>
+
+</html>

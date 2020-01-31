@@ -5,8 +5,15 @@
 }
 
 .img2{
-    width: 20vw!important;
+    width: 19vw!important;
     height: 50vh!important;
+}
+
+.text-muted {
+    color: black!important;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
 }
 
 .img-fluid {

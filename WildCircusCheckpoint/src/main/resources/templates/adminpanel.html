@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head th:fragment="adminhead">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../style/adminpanel.css" rel="stylesheet">
+<link href="../style/admin.css" rel="stylesheet">
+
+
+<title>Panel administrateur</title>
+</head>
+<body>
+	<div class="table-responsive bg-light">
+		<div id="page-container" class="main-admin" th:fragment="adminHeader">
+			<nav
+				class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
+				<a class="navbar-brand" href="#"></a>
+				<div id="open-menu" class="menu-bar">
+					<div class="bars"></div>
+				</div>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown ets-right-0"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> <img src="/img/logo.png"
+							class="img-fluid rounded-circle border user-profile"></img>
+					</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-divider"></div>
+							<form sec:authorize="isAuthenticated()" th:action="@{/logout}"
+								method="post">
+								<input type="submit" class="btn" value="Deconnexion" />
+							</form>
+						</div></li>
+				</ul>
+			</nav>
+			<div class="side-bar" th:fragment="adminSidebar">
+				<div class="side-bar-links">
+					<div class="side-bar-logo text-center py-3">
+						<a href="/"> <img src="/img/logo.png"
+							class="img-fluid rounded-circle border bg-secoundry mb-3">
+						</a>
+						<h5>Administrateur</h5>
+					</div>
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="/admin/reservations"
+							class="nav-links d-block"><i class="fa fa-table pr-2"></i>
+								Réservation</a></li>
+						<li class="nav-item"><a href="/admin/magiciens"
+							class="nav-links d-block"><i class="fa fa-users pr-2"></i>
+								Magiciens</a></li>
+						<li class="nav-item"><a href="/admin/clowns"
+							class="nav-links d-block"><i class="fa fa-users pr-2"></i>
+								Clowns</a></li>
+						<li class="nav-item"><a href="/admin/animals"
+							class="nav-links d-block"><i class="fa fa-users pr-2"></i>
+								animaux</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div th:fragment="adminJsBottom">
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery("#open-menu").click(function() {
+				if (jQuery('#page-container').hasClass('show-menu')) {
+					jQuery("#page-container").removeClass('show-menu');
+				}
+
+				else {
+					jQuery("#page-container").addClass('show-menu');
+				}
+			});
+		});
+	</script>
+	</div>
+</body>
+</html>
+</html>

@@ -6,7 +6,7 @@
 <link href="/style/header.css" rel="stylesheet">
 <link href="/style/footer.css" rel="stylesheet">
 <link href="/style/index.css" rel="stylesheet">
-<link href="/style/reservation.css" rel="stylesheet">
+<link href="/style/equipe.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <header><nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 	<div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>WILD CIRCUS</span></a>
+  <a class="navbar-brand" href="/"><span>WILD CIRCUS</span></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -28,10 +28,10 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">RESERVATION</a>
+        <a class="nav-link" href="/reservation">RESERVATION</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ARTIST</a>
+        <a class="nav-link" href="/equipe">ARTIST</a>
       </li>
     </ul>
   </div>
@@ -42,7 +42,7 @@
 	<div class="container">
 	<div class="banner-text">
 	<div class="banner-heading">
-	 PRICES!
+	 OUR AMAZING ARTIST!
 	</div>
 	<div class="banner-sub-heading">
 	COME AND SEE THE BEST SHOW EVER
@@ -50,6 +50,99 @@
 	</div>
 	</div>
 </div></header>
+
+
+<section id="team" class="team content-section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>Our MAGICIAN</h2>
+        <h3 class="caption gray">Meet the people who make awesome stuffs</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" th:each="magicien : ${magiciens}">
+            <div class="team-member">
+              <figure>
+                <img th:src="${magicien.photo}" src="https://cdn.pixabay.com/photo/2018/09/12/21/10/gothic-3673246_960_720.jpg" alt="" class="img-responsive">
+                <figcaption>
+                  <p th:text="${magicien.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia.</p>
+                </figcaption>
+              </figure>
+              <h4 th:text="${magicien.name}">Lauren Cox</h4>
+              <p>MAGICIAN</p>
+            </div><!-- /.team-member-->
+          </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.our-team -->
+
+
+<!-- Our team Section -->
+<section id="team" class="team content-section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>Our CLOWNS</h2>
+      </div><!-- /.col-md-12 -->
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4" th:each="clown : ${clowns}">
+            <div class="team-member">
+              <figure>
+                <img th:src="${clown.photo}"  src="https://www.augusteclon.com/medias/images/001.jpg" alt="" class="img-responsive">
+                <figcaption>
+                  <p th:text="${clown.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia.</p>
+                </figcaption>
+              </figure>
+              <h4 th:text="${clown.name}">Lauren Cox</h4>
+              <p>CLOWN</p>
+            </div><!-- /.team-member-->
+          </div><!-- /.col-md-4 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.our-team -->
+
+<section id="team" class="team content-section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>Our Amazing ANIMALS</h2>
+      </div><!-- /.col-md-12 -->
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4" th:each="animal : ${animals}">
+            <div class="team-member">
+              <figure>
+                <img th:src="${animal.photo}"  src="https://www.augusteclon.com/medias/images/001.jpg" alt="" class="img-responsive">
+                <figcaption>
+                  <p th:text="${animal.description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores mollitia.</p>
+                </figcaption>
+              </figure>
+              <h4 th:text="${animal.name}">Lauren Cox</h4>
+              <p>ANIMALS</p>
+            </div><!-- /.team-member-->
+          </div><!-- /.col-md-4 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.our-team -->
+
+
+
 <footer th:replace="footer.html :: footer"></footer>   
 <script src="/js/header.js" ></script>
 </body>

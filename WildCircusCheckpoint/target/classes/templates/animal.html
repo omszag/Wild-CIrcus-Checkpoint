@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+<title>WILD CIRCUS</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head th:replace="adminpanel.html :: adminhead"></head>
+<link href="/style/adminpanel.css" rel="stylesheet">
+</head>
+
+
+<body>
+	<div th:replace="adminpanel.html :: adminHeader">
+
+	</div>
+
+	<form class="formulaire" method="post" th:action="@{/admin/animal}"
+		th:object="${animal}" enctype='multipart/form-data'>
+		<fieldset class="formulaireajout">
+
+			<!-- Form Name -->
+			<legend>Ajouter/Modifier un animal</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<input name="id" th:field="*{id}" type="hidden"> <label
+					class="col-md-4 control-label" for="animal-name">name</label>
+				<div class="col-md-4">
+					<input id="animal-name" name="name" placeholder="zappata"
+						required th:field="*{name}" type="text"
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="animal-photo">URL
+					photo</label>
+				<div class="col-md-4">
+					<input name="id" th:field="*{photo}" type="hidden"> <input
+						id="animal-photo" name="photoByte" type="file"
+						placeholder="URL photo" class="form-control input-md" required>
+				</div>
+			</div>
+
+			<!-- Textarea -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="animal-description">Description</label>
+				<div class="col-md-4">
+					<textarea class="form-control" id="animal-description"
+						name="description" required th:field="*{description}">Description, spécialités, points fort ...</textarea>
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<div class="col-md-4">
+					<button id="singlebutton" name="singlebutton"
+						class="btn btn-primary" type="submit" value="Send">Enregistrer</button>
+				</div>
+			</div>
+			<div class="divretour">
+				<a href="/admin/animals" class="lienretour">Retourner à la
+					liste des animaux</a>
+			</div>
+
+		</fieldset>
+	</form>
+		<br>
+
+
+
+
+	<div th:replace="adminpanel.html :: adminJsBottom"></div>
+
+
+</body>
+</html>
